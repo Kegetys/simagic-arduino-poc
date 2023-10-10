@@ -1,6 +1,6 @@
 # Overview
 
-![](https://junk.kegetys.fi/simagic_banner.jpg)
+![](https://junk.kegetys.fi/simagic_banner2.jpg)
 
 This is a description of the wireless protocol used by Simagic direct drive wheel bases and rims. With this you can make your own wireless rims that send button presses to the Simagic base, receive data from a Simagic rim or maybe make a separate button box that activates the base buttons (for wheels without any buttons on them).
 
