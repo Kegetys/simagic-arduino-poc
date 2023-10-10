@@ -4,7 +4,7 @@
 // requres RF24 library
 
 // uncomment this if you are usin an RF24 clone to disable ACKs and instead send multiple messages for redundancy
-#define SIMAGIC_NO_ACKS
+//#define SIMAGIC_NO_ACKS
 
 //#define DUMP_SENT
 //#define DUMP_RECEIVED
