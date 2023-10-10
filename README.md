@@ -57,9 +57,9 @@ The rim always appears to send 8 byte packets. Interestingly despite the wireles
 
 The structure appears to be as follows:
 ```
-D1 D2 D3 D4 CO D5 D6 CC 
-            ^^       ^^ CRC checksum
-            ^^ Command
+D1 D2 D3 D4 D5 D6 CO CC 
+                  || ^^ CRC checksum
+                  ^^ Command
 ^^ D1-D6 are dynamic data depending on the Command sent and CRC being the CRC-8/MAXIM checksum.
 ```
 
@@ -69,7 +69,7 @@ Button and axis data are sent with command 0x3c.
 
 D1 to D4 are bit flags for buttons currently held down
 
-D5 and D5 are clutch paddle axis values (0-255)
+D6 is used for clutch paddles axis values with first bit signifiying axis to set and the rest the axis value (0 - 127).
 
 ## Rim connect packets
 
@@ -86,5 +86,11 @@ The data contains at least the rim type, firmware version and what looks like so
 # Proof-of-concept Arduino project
 
 See [simagic-poc](simagic-poc) folder for an example proof-of-concept Arduino project for a rim that sends button presses to the base. The pinout is for a Wemos D1 Mini microcontroller but all you really need is an nRF24 module correctly wired to the board so any Arduino or ESP board should be easy to make work.
+
+The interesting bits are in the [simagic class](simagic-poc/simagic.h).
+
+My test hardware looks like this:
+
+![](simagic-poc/hardware.jpg)
 
 
