@@ -75,7 +75,7 @@ D5 and D5 are clutch paddle axis values (0-255)
 
 When the rim is connected it identifies itself with the base and the rim apperas in SimPro Manager. However even without this being sent the button packet above works, so you don't actually need to send this for custom rims to work fine.
 
-The data contains at least the rim type, firmware version and what looks like some kind of per-button information (maybe the LED colors?). I haven't fully examined this data, a dump is included in initpacket.h            
+The data contains at least the rim type, firmware version and what looks like some kind of per-button information (maybe the LED colors?). I haven't fully examined this data, a dump is included in [initpacket.h](simagic-poc/initpacket.h)
 
 # Unknowns
 - There is apparently some kind of automatic channel negotation in some rims?
@@ -85,6 +85,6 @@ The data contains at least the rim type, firmware version and what looks like so
 
 # Proof-of-concept Arduino project
 
-See "example" folder for an example proof-of-concept Arduino project for a rim that sends button presses to the base. The pinout is for a Wemos D1 Mini microcontroller but all you really need is an nRF24 module correctly wired to the board so any Arduino or ESP board should be easy to make work.
+See [simagic-poc](simagic-poc) folder for an example proof-of-concept Arduino project for a rim that sends button presses to the base. The pinout is for a Wemos D1 Mini microcontroller but all you really need is an nRF24 module correctly wired to the board so any Arduino or ESP board should be easy to make work.
 
 
