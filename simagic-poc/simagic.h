@@ -71,7 +71,7 @@ public:
       {
         // send button state as keepalive
         // seems type 0x00 might be some kind of dedicated keepalive message?
-        sendType(0x3C, _buttons, _axes[0], 0x00, SIMAGIC_REPEAT);
+        sendType(0x3C, _buttons, _axes[0], 0x00);
         _lastKeepalive = millis();
       }
     }
